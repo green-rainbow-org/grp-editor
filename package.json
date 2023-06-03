@@ -1,0 +1,27 @@
+{
+  "name": "grp-editor",
+  "version": "1.0.0",
+  "description": "Editor for MA Green Rainbow party",
+  "main": "./dist/editor.js",
+  "module": "./dist/editor.mjs",
+  "types": "./dist/editor.d.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.js'",
+    "build:publish": "pnpm build && pnpm publish",
+    "build": "tsup src/editor.js --format cjs,esm --dts --clean --target=chrome88,firefox78,safari14"
+  },
+  "repository": "green-rainbow-org/grp-editor",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@arrow-js/core": "1.0.0-alpha.9",
+    "@tinymce/tinymce-webcomponent": "^2.0.2",
+    "arrow-tags": "^1.0.0",
+    "grp-global-style": "^1.0.0",
+    "tslint": "^6.1.3",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2",
+    "typescript-plugin-css-modules": "^5.0.1"
+  }
+}
