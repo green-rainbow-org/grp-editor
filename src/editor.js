@@ -1,10 +1,10 @@
 const TinyMceEditor = window.customElements.get('tinymce-editor');
-import editorCSS from './editor.css' assert { type: 'css' };
+import editorCSS from './editor.module.css';
 
 import { html } from '@arrow-js/core';
 import { arrowTags } from 'arrow-tags';
 
-const toEditor = data => {
+const toEditor = (data, globalCSS) => {
   const plugins = 'link quickbars autosave';
   const toolbar = `
     quickimage link blockquote fontsize bold italic | undo redo
@@ -47,7 +47,7 @@ const toEditor = data => {
       super.connectedCallback();
       const root = this.shadowRoot;
       root.adoptedStyleSheets = [
-        data.globalCSS, editorCSS
+        globalCSS, editorCSS
       ];
       this.mutate.observe(root, { 
         subtree: true, childList: true, attributes: true
