@@ -1,6 +1,6 @@
 {
   "name": "grp-editor",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Editor for MA Green Rainbow party",
   "main": "./dist/editor.js",
   "module": "./dist/editor.mjs",

@@ -1,3 +1,4 @@
+import '@tinymce/tinymce-webcomponent';
 const TinyMceEditor = window.customElements.get('tinymce-editor');
 import editorCSS from './editor.module.css';
 
